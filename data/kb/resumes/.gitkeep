@@ -1,0 +1,10 @@
+Real CVs live here and are gitignored - they are personal data.
+
+The directory itself is tracked because `tools/_shared.repo_root()` locates the
+repository by walking up until it finds this path. Without the folder in a clean
+checkout, every test that touches `output_dir()` or `load_resume()` passes
+locally and fails in CI.
+
+To run the app from a fresh clone, copy the fictional samples in
+`data/samples/resumes/` here, or drop in your own as `<profile>.md` -
+`automotive_cyber.md`, `devops.md`, `ai_eng.md`.

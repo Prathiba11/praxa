@@ -1,0 +1,3988 @@
+[
+  {
+    "question": "my container keeps dying and the logs just stop - where do I start looking?",
+    "expected": [
+      "kubernetes_and_containers.md"
+    ],
+    "expected_sections": [
+      "Diagnosing the common failures",
+      "Kubernetes: what it actually is"
+    ],
+    "why_hard": "describes a symptom; the words OOMKilled, CrashLoopBackOff and exit code appear nowhere in the question",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "my container keeps dying and the logs just stop - where do I start looking?"
+        ],
+        "sources": [
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Resources, health and scaling"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Why containers"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Docker essentials worth knowing precisely"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Diagnosing the common failures"
+          }
+        ],
+        "latency_ms": 47063.03940003272,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "my container keeps dying and the logs just stop - where do I start looking?"
+        ],
+        "sources": [
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Resources, health and scaling"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Why containers"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Docker essentials worth knowing precisely"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Diagnosing the common failures"
+          }
+        ],
+        "latency_ms": 39757.75099999737,
+        "cost_usd": 0.00018464999999999996,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "how do I show a manager in numbers whether we are shipping quickly and safely?",
+    "expected": [
+      "sre_and_dora.md"
+    ],
+    "expected_sections": [
+      "DORA metrics"
+    ],
+    "why_hard": "no mention of DORA, deployment frequency, lead time or change failure rate",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "how do I show a manager in numbers whether we are shipping quickly and safely?"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "The data is the project"
+          },
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Making it visible"
+          }
+        ],
+        "latency_ms": 41095.973299990874,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 2,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "how do I show a manager in numbers whether we are shipping quickly and safely?",
+          "how to measure shipping efficiency and safety metrics"
+        ],
+        "sources": [
+          {
+            "source": "sre_and_dora.md",
+            "section": "DORA metrics"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "DORA metrics"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "Evaluating an agent"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          }
+        ],
+        "latency_ms": 108179.8738000216,
+        "cost_usd": 0.0004077,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "when is it reasonable to stop building features for a while and work on stability instead?",
+    "expected": [
+      "sre_and_dora.md"
+    ],
+    "expected_sections": [
+      "Site Reliability Engineering: the core idea"
+    ],
+    "why_hard": "the answer is error budgets; the term is not used in the question",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 4,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "when is it reasonable to stop building features for a while and work on stability instead?"
+        ],
+        "sources": [
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Applicability timeline"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "The insight worth stating in an interview"
+          },
+          {
+            "source": "mlops_lifecycle.md",
+            "section": "7 \u00b7 Monitoring"
+          }
+        ],
+        "latency_ms": 18715.629099984653,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 2,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "when is it reasonable to stop building features for a while and work on stability instead?",
+          "when to prioritize stability over feature development"
+        ],
+        "sources": [
+          {
+            "source": "sre_and_dora.md",
+            "section": "The insight worth stating in an interview"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Applicability timeline"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "Error budget"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "DORA metrics"
+          },
+          {
+            "source": "mlops_lifecycle.md",
+            "section": "7 \u00b7 Monitoring"
+          }
+        ],
+        "latency_ms": 63564.06520004384,
+        "cost_usd": 0.0004262999999999999,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "why is it safer for the cluster to pull its own configuration than for a pipeline to push it?",
+    "expected": [
+      "cicd_and_gitops.md"
+    ],
+    "expected_sections": [
+      "GitOps"
+    ],
+    "why_hard": "competes with the CI/CD sections of the same document; only the right section answers it",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "why is it safer for the cluster to pull its own configuration than for a pipeline to push it?"
+        ],
+        "sources": [
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "GitOps"
+          },
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "Pipelines for infrastructure"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Capacity and autoscaling"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Kubernetes specifics"
+          },
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "GitHub Actions specifics"
+          }
+        ],
+        "latency_ms": 33449.67550004367,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "why is it safer for the cluster to pull its own configuration than for a pipeline to push it?"
+        ],
+        "sources": [
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "GitOps"
+          },
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "Pipelines for infrastructure"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Capacity and autoscaling"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Kubernetes specifics"
+          },
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "GitHub Actions specifics"
+          }
+        ],
+        "latency_ms": 37807.80609999783,
+        "cost_usd": 0.00018165,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "what stops a release from going out to every machine at once if it turns out to be broken?",
+    "expected": [
+      "cicd_and_gitops.md"
+    ],
+    "expected_sections": [
+      "Deployment strategies",
+      "Pipeline design principles"
+    ],
+    "why_hard": "canary and blue-green are the answer, neither word appears",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 2,
+        "section_rank": 2,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "what stops a release from going out to every machine at once if it turns out to be broken?"
+        ],
+        "sources": [
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "Modules and structure"
+          },
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "Pipeline design principles"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Diagnosing the common failures"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Capacity and autoscaling"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "The insight worth stating in an interview"
+          }
+        ],
+        "latency_ms": 26217.129399999976,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 2,
+        "section_rank": 2,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "what stops a release from going out to every machine at once if it turns out to be broken?"
+        ],
+        "sources": [
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "Modules and structure"
+          },
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "Pipeline design principles"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Diagnosing the common failures"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Capacity and autoscaling"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "The insight worth stating in an interview"
+          }
+        ],
+        "latency_ms": 21726.184199971613,
+        "cost_usd": 0.0001761,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "a supplier wants to send software to vehicles already on the road - what has to be in place first?",
+    "expected": [
+      "unece_r155_r156.md"
+    ],
+    "expected_sections": [
+      "R156 - Software Update and Software Update Management System",
+      "R156 \u2014 Software Update and Software Update Management System"
+    ],
+    "why_hard": "R155 and R156 sit in the same file and read almost identically to a bag-of-words retriever",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 2,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "a supplier wants to send software to vehicles already on the road - what has to be in place first?"
+        ],
+        "sources": [
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Capability levels"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Why these matter more than the standards"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R156 \u2014 Software Update and Software Update Management System"
+          }
+        ],
+        "latency_ms": 18240.555099968333,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 2,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "a supplier wants to send software to vehicles already on the road - what has to be in place first?"
+        ],
+        "sources": [
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Capability levels"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Why these matter more than the standards"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R156 \u2014 Software Update and Software Update Management System"
+          }
+        ],
+        "latency_ms": 25824.46950004669,
+        "cost_usd": 0.00017639999999999995,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "who has to prove they manage vehicle security before they are allowed to sell a car in Europe?",
+    "expected": [
+      "unece_r155_r156.md"
+    ],
+    "expected_sections": [
+      "R155 - Cyber Security and Cyber Security Management System",
+      "R155 \u2014 Cyber Security and Cyber Security Management System",
+      "Why these matter more than the standards"
+    ],
+    "why_hard": "the sibling regulation in the same document is a plausible wrong answer",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "who has to prove they manage vehicle security before they are allowed to sell a car in Europe?"
+        ],
+        "sources": [
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Why these matter more than the standards"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Applicability timeline"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          }
+        ],
+        "latency_ms": 20781.021099945065,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "who has to prove they manage vehicle security before they are allowed to sell a car in Europe?"
+        ],
+        "sources": [
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Why these matter more than the standards"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "Applicability timeline"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          }
+        ],
+        "latency_ms": 13556.179100007284,
+        "cost_usd": 0.00016679999999999993,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "how do you judge how much effort and skill an attacker would actually need?",
+    "expected": [
+      "iso_sae_21434.md"
+    ],
+    "expected_sections": [
+      "TARA: the analytical core"
+    ],
+    "why_hard": "attack feasibility rating, asked without the term",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "how do you judge how much effort and skill an attacker would actually need?"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "Cybersecurity Assurance Level (CAL)"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          }
+        ],
+        "latency_ms": 12075.766300025862,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "how do you judge how much effort and skill an attacker would actually need?"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "Cybersecurity Assurance Level (CAL)"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          }
+        ],
+        "latency_ms": 16083.794599981047,
+        "cost_usd": 0.00017640000000000017,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "wie bewerte ich das Risiko eines Angriffs auf ein Steuerger\u00e4t?",
+    "expected": [
+      "iso_sae_21434.md"
+    ],
+    "expected_sections": [
+      "TARA: the analytical core",
+      "Structure"
+    ],
+    "why_hard": "German question, English source, and no shared tokens at all",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "wie bewerte ich das Risiko eines Angriffs auf ein Steuerger\u00e4t?"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          }
+        ],
+        "latency_ms": 22214.22280004481,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "wie bewerte ich das Risiko eines Angriffs auf ein Steuerger\u00e4t?"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          }
+        ],
+        "latency_ms": 36854.18930003652,
+        "cost_usd": 0.0001692,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "welche Nachweise verlangt ein Auditor f\u00fcr ein Managementsystem zur Fahrzeugsicherheit?",
+    "expected": [
+      "unece_r155_r156.md",
+      "iso_sae_21434.md"
+    ],
+    "expected_sections": [],
+    "why_hard": "German, and two documents legitimately contribute",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "welche Nachweise verlangt ein Auditor f\u00fcr ein Managementsystem zur Fahrzeugsicherheit?"
+        ],
+        "sources": [
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "Relationship to neighbouring standards"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          }
+        ],
+        "latency_ms": 33894.965999992564,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "welche Nachweise verlangt ein Auditor f\u00fcr ein Managementsystem zur Fahrzeugsicherheit?"
+        ],
+        "sources": [
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "iso_sae_21434.md",
+            "section": "Relationship to neighbouring standards"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          }
+        ],
+        "latency_ms": 29562.709799967706,
+        "cost_usd": 0.00017309999999999992,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "what is the difference between the process maturity assessment and the security standard?",
+    "expected": [
+      "aspice_and_ecu_security_testing.md",
+      "iso_sae_21434.md"
+    ],
+    "expected_sections": [],
+    "why_hard": "requires distinguishing two neighbouring documents rather than matching one",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "what is the difference between the process maturity assessment and the security standard?"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "Relationship to neighbouring standards"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": ""
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "What it is"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Process scope"
+          }
+        ],
+        "latency_ms": 40509.356099995784,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 2,
+        "verdict": "weak",
+        "graded": true,
+        "queries": [
+          "what is the difference between the process maturity assessment and the security standard?",
+          "difference between process maturity models and security frameworks"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "Relationship to neighbouring standards"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": ""
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "What it is"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Process scope"
+          }
+        ],
+        "latency_ms": 59585.37190000061,
+        "cost_usd": 0.00039525,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "a recruiter's software discards my application before a person sees it - what causes that most often?",
+    "expected": [
+      "ats_guide.md"
+    ],
+    "expected_sections": [
+      "How candidates are really filtered out, in order of frequency",
+      "What an ATS actually is"
+    ],
+    "why_hard": "no use of the term ATS, parsing, or keyword",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "a recruiter's software discards my application before a person sees it - what causes that most often?"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "What an ATS actually is"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "2. Missing the literal keyword"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Who names a number first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          }
+        ],
+        "latency_ms": 27952.787299989723,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "a recruiter's software discards my application before a person sees it - what causes that most often?"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "What an ATS actually is"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "2. Missing the literal keyword"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Who names a number first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          }
+        ],
+        "latency_ms": 35304.10230002599,
+        "cost_usd": 0.00019275,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "should I copy phrases straight out of the advert into my CV?",
+    "expected": [
+      "ats_guide.md"
+    ],
+    "expected_sections": [
+      "Keyword strategy",
+      "Rules for tailoring a CV"
+    ],
+    "why_hard": "targets one section of a long guide whose other sections are lexically similar",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 3,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "should I copy phrases straight out of the advert into my CV?"
+        ],
+        "sources": [
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The cover letter's actual job"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Cover letter guidance"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Scoring a CV against a posting"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          }
+        ],
+        "latency_ms": 30136.547500034794,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 2,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "should I copy phrases straight out of the advert into my CV?",
+          "should I use exact phrases from job postings in my CV?"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "Scoring a CV against a posting"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Matching the letter to the posting"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Addressing a gap you actually have"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Cover letter guidance"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "German market conventions"
+          }
+        ],
+        "latency_ms": 59201.64980000118,
+        "cost_usd": 0.0004289999999999999,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "my interview answers wander and I never seem to get to the point - what am I doing wrong?",
+    "expected": [
+      "star_framework.md"
+    ],
+    "expected_sections": [
+      "The four failure modes to score against",
+      "Strong versus weak, letter by letter"
+    ],
+    "why_hard": "STAR is not mentioned; the guide's other sections compete",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 3,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "my interview answers wander and I never seem to get to the point - what am I doing wrong?"
+        ],
+        "sources": [
+          {
+            "source": "star_framework.md",
+            "section": "The STAR structure"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Interviewer behaviour: how to be realistic rather than helpful"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "The four failure modes to score against"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The cover letter's actual job"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Question categories"
+          }
+        ],
+        "latency_ms": 38243.45379997976,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 3,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "my interview answers wander and I never seem to get to the point - what am I doing wrong?"
+        ],
+        "sources": [
+          {
+            "source": "star_framework.md",
+            "section": "The STAR structure"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Interviewer behaviour: how to be realistic rather than helpful"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "The four failure modes to score against"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The cover letter's actual job"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Question categories"
+          }
+        ],
+        "latency_ms": 32863.23680001078,
+        "cost_usd": 0.00019244999999999983,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "how should I talk about the period when I was not working?",
+    "expected": [
+      "star_framework.md"
+    ],
+    "expected_sections": [
+      "Career-transition and gap questions"
+    ],
+    "why_hard": "a specific late section of a long document",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 4,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "how should I talk about the period when I was not working?"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Internal raises"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Question categories"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Addressing a gap you actually have"
+          }
+        ],
+        "latency_ms": 36549.9540999881,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 4,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "how should I talk about the period when I was not working?"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Internal raises"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Question categories"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Addressing a gap you actually have"
+          }
+        ],
+        "latency_ms": 40638.88189999852,
+        "cost_usd": 0.00018120000000000007,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "the assistant still makes things up even though I gave it the documents - why?",
+    "expected": [
+      "rag_architecture.md"
+    ],
+    "expected_sections": [
+      "Failure modes to be able to name",
+      "Context assembly and generation"
+    ],
+    "why_hard": "hallucination and grounding are not named",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 2,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "the assistant still makes things up even though I gave it the documents - why?"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Why RAG exists"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "What an ATS actually is"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "Why RAG is usually tried first"
+          }
+        ],
+        "latency_ms": 46658.5832000128,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 2,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "the assistant still makes things up even though I gave it the documents - why?"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Why RAG exists"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "What an ATS actually is"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "Why RAG is usually tried first"
+          }
+        ],
+        "latency_ms": 58621.23390001943,
+        "cost_usd": 0.00017310000000000003,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "searching by meaning misses documents that use a different word for the same thing - what fixes that?",
+    "expected": [
+      "rag_architecture.md"
+    ],
+    "expected_sections": [
+      "Hybrid search",
+      "Query translation",
+      "Embeddings"
+    ],
+    "why_hard": "several sections of one document are plausible; the question describes vocabulary mismatch without naming BM25 or fusion",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 3,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "searching by meaning misses documents that use a different word for the same thing - what fixes that?"
+        ],
+        "sources": [
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Prompt injection"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "2. Missing the literal keyword"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Structured retrieval"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "Software-level expectations"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Reciprocal Rank Fusion"
+          }
+        ],
+        "latency_ms": 40690.96600002376,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 3,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "searching by meaning misses documents that use a different word for the same thing - what fixes that?"
+        ],
+        "sources": [
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Prompt injection"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "2. Missing the literal keyword"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Structured retrieval"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "Software-level expectations"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Reciprocal Rank Fusion"
+          }
+        ],
+        "latency_ms": 38279.374000034295,
+        "cost_usd": 0.00016485000000000002,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "a document I pulled back contains an instruction aimed at the assistant - how do I stop it being followed?",
+    "expected": [
+      "llmops_and_safety.md",
+      "rag_architecture.md"
+    ],
+    "expected_sections": [
+      "Prompt injection"
+    ],
+    "why_hard": "one section of an eleven-section document, described rather than named",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "a document I pulled back contains an instruction aimed at the assistant - how do I stop it being followed?"
+        ],
+        "sources": [
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Prompt injection"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "Limiting what an agent can reach"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Tool calling"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Chunking"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Context assembly and generation"
+          }
+        ],
+        "latency_ms": 22924.07909996109,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "a document I pulled back contains an instruction aimed at the assistant - how do I stop it being followed?"
+        ],
+        "sources": [
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Prompt injection"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "Limiting what an agent can reach"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Tool calling"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Chunking"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Context assembly and generation"
+          }
+        ],
+        "latency_ms": 23920.329999993555,
+        "cost_usd": 0.00018929999999999989,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "how do I stop getting prose back when I need fields I can parse?",
+    "expected": [
+      "llmops_and_safety.md"
+    ],
+    "expected_sections": [
+      "Structured output",
+      "Tool calling"
+    ],
+    "why_hard": "adjacent sections of the same file are near neighbours in embedding space",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 2,
+        "section_rank": 2,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "how do I stop getting prose back when I need fields I can parse?"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Tool calling"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for a parse-safe CV"
+          },
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Chunking"
+          }
+        ],
+        "latency_ms": 18508.679700025823,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 2,
+        "section_rank": 2,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "how do I stop getting prose back when I need fields I can parse?"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Tool calling"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for a parse-safe CV"
+          },
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Chunking"
+          }
+        ],
+        "latency_ms": 25283.988800016232,
+        "cost_usd": 0.0001935000000000001,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "it scored well in testing and badly once real users arrived, on the same kind of input",
+    "expected": [
+      "mlops_lifecycle.md"
+    ],
+    "expected_sections": [
+      "The lifecycle",
+      "Why ML systems need their own operational discipline"
+    ],
+    "why_hard": "training-serving skew, described as a symptom",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 5,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "it scored well in testing and badly once real users arrived, on the same kind of input"
+        ],
+        "sources": [
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Evaluation"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "SLI, SLO, SLA"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "The STAR structure"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "mlops_lifecycle.md",
+            "section": "Why ML systems need their own operational discipline"
+          }
+        ],
+        "latency_ms": 28599.861199967563,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 5,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "it scored well in testing and badly once real users arrived, on the same kind of input"
+        ],
+        "sources": [
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Evaluation"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "SLI, SLO, SLA"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "The STAR structure"
+          },
+          {
+            "source": "aspice_and_ecu_security_testing.md",
+            "section": "Test knowledge categories"
+          },
+          {
+            "source": "mlops_lifecycle.md",
+            "section": "Why ML systems need their own operational discipline"
+          }
+        ],
+        "latency_ms": 37119.43399999291,
+        "cost_usd": 0.00017084999999999995,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "have I ever attacked a device deliberately as part of my job?",
+    "expected": [
+      "automotive_cyber.md"
+    ],
+    "expected_sections": [
+      "Experience",
+      "Summary",
+      "Skills"
+    ],
+    "why_hard": "the ECU security-testing reference document is a strong lexical competitor; the CV is the correct answer",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 4,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "have I ever attacked a device deliberately as part of my job?"
+        ],
+        "sources": [
+          {
+            "source": "automotive_cyber.md",
+            "section": ""
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Summary"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 25759.513800032437,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 4,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "have I ever attacked a device deliberately as part of my job?"
+        ],
+        "sources": [
+          {
+            "source": "automotive_cyber.md",
+            "section": ""
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Summary"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 27130.185699963477,
+        "cost_usd": 0.00015509999999999992,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "which regulations have I applied in real projects rather than only studied?",
+    "expected": [
+      "automotive_cyber.md"
+    ],
+    "expected_sections": [
+      "Experience",
+      "Summary"
+    ],
+    "why_hard": "the regulation documents themselves out-match the CV on vocabulary",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 4,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "which regulations have I applied in real projects rather than only studied?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Career Copilot \u2014 domain-specialised RAG assistant with tool calling"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Career Copilot \u2014 domain-specialised RAG assistant with tool calling"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Skills"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 27036.13800002495,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 4,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "which regulations have I applied in real projects rather than only studied?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Career Copilot \u2014 domain-specialised RAG assistant with tool calling"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Career Copilot \u2014 domain-specialised RAG assistant with tool calling"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Skills"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 44594.461100001354,
+        "cost_usd": 0.00017805000000000002,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "was habe ich beruflich mit Container-Orchestrierung gemacht?",
+    "expected": [
+      "devops.md"
+    ],
+    "expected_sections": [
+      "Experience",
+      "Skills",
+      "Summary"
+    ],
+    "why_hard": "German question about an English CV, competing with the Kubernetes reference document",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "was habe ich beruflich mit Container-Orchestrierung gemacht?"
+        ],
+        "sources": [
+          {
+            "source": "devops.md",
+            "section": "Summary"
+          },
+          {
+            "source": "devops.md",
+            "section": "Skills"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "devops.md",
+            "section": "Career Copilot \u2014 RAG application with CI/CD"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 57112.62369999895,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "was habe ich beruflich mit Container-Orchestrierung gemacht?"
+        ],
+        "sources": [
+          {
+            "source": "devops.md",
+            "section": "Summary"
+          },
+          {
+            "source": "devops.md",
+            "section": "Skills"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "devops.md",
+            "section": "Career Copilot \u2014 RAG application with CI/CD"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 21464.345999993384,
+        "cost_usd": 0.0001734000000000001,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "have I built anything with language models outside of paid work?",
+    "expected": [
+      "ai_eng.md"
+    ],
+    "expected_sections": [
+      "Projects"
+    ],
+    "why_hard": "must reach the Projects section specifically, not Experience",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "have I built anything with language models outside of paid work?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Career Copilot \u2014 domain-specialised RAG assistant with tool calling"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Software Developer \u2014 L&T Technology Services Limited"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Summary"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Languages"
+          }
+        ],
+        "latency_ms": 23402.858399960678,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "have I built anything with language models outside of paid work?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Career Copilot \u2014 domain-specialised RAG assistant with tool calling"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Software Developer \u2014 L&T Technology Services Limited"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Summary"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Languages"
+          }
+        ],
+        "latency_ms": 43552.56380001083,
+        "cost_usd": 0.00014159999999999997,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "have I ever taught this material to other engineers?",
+    "expected": [
+      "automotive_cyber.md",
+      "devops.md",
+      "ai_eng.md"
+    ],
+    "expected_sections": [
+      "Experience"
+    ],
+    "why_hard": "one bullet inside a long Experience section",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "have I ever taught this material to other engineers?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "devops.md",
+            "section": "Summary"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 41131.79030001629,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 2,
+        "verdict": "weak",
+        "graded": true,
+        "queries": [
+          "have I ever taught this material to other engineers?",
+          "have I conducted training sessions for engineers?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Certifications"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Certifications"
+          },
+          {
+            "source": "devops.md",
+            "section": "Cybersecurity Consultant (DevOps and Automation focus) \u2014 Vector Consulting Services GmbH"
+          }
+        ],
+        "latency_ms": 113714.10540002398,
+        "cost_usd": 0.00037049999999999995,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "which languages can I work in professionally?",
+    "expected": [
+      "automotive_cyber.md",
+      "devops.md",
+      "ai_eng.md"
+    ],
+    "expected_sections": [
+      "Languages"
+    ],
+    "why_hard": "the shortest section in the corpus - the one a size-based chunker would swallow",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "which languages can I work in professionally?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Languages"
+          },
+          {
+            "source": "devops.md",
+            "section": "Languages"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "German market conventions"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Languages"
+          }
+        ],
+        "latency_ms": 36160.294500004966,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "which languages can I work in professionally?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "Languages"
+          },
+          {
+            "source": "devops.md",
+            "section": "Languages"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "German market conventions"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Languages"
+          }
+        ],
+        "latency_ms": 23373.118999996223,
+        "cost_usd": 0.00012239999999999994,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "what did I study, and where?",
+    "expected": [
+      "automotive_cyber.md",
+      "devops.md",
+      "ai_eng.md"
+    ],
+    "expected_sections": [
+      "Education"
+    ],
+    "why_hard": "short section, competes with Certifications and Publications in the same document",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "what did I study, and where?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          },
+          {
+            "source": "devops.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "devops.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          }
+        ],
+        "latency_ms": 59004.30410000263,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "what did I study, and where?"
+        ],
+        "sources": [
+          {
+            "source": "ai_eng.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          },
+          {
+            "source": "devops.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "devops.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "M.Sc. Information Technology \u2014 University of Stuttgart"
+          }
+        ],
+        "latency_ms": 28323.93310003681,
+        "cost_usd": 0.0001407,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "what is the weather in Stuttgart tomorrow?",
+    "expected": [],
+    "expected_sections": [],
+    "why_hard": "out of domain: nothing should be considered a hit, and the guardrail should refuse it before retrieval runs at all",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "what is the weather in Stuttgart tomorrow?"
+        ],
+        "sources": [
+          {
+            "source": "rag_architecture.md",
+            "section": "Structured retrieval"
+          },
+          {
+            "source": "devops.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "When the offer arrives"
+          }
+        ],
+        "latency_ms": 20592.706199968234,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 2,
+        "verdict": "none",
+        "graded": true,
+        "queries": [
+          "what is the weather in Stuttgart tomorrow?",
+          "weather forecast Stuttgart"
+        ],
+        "sources": [
+          {
+            "source": "rag_architecture.md",
+            "section": "Structured retrieval"
+          },
+          {
+            "source": "devops.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "ai_eng.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Master's Thesis \u2014 University of Stuttgart"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "When the offer arrives"
+          }
+        ],
+        "latency_ms": 46643.19079997949,
+        "cost_usd": 0.0004099500000000003,
+        "calls": 4
+      }
+    }
+  },
+  {
+    "question": "two of my safety channels run on the same chip - does splitting the requirement between them still count?",
+    "expected": [
+      "iso_26262_functional_safety.md"
+    ],
+    "expected_sections": [
+      "ASIL decomposition"
+    ],
+    "why_hard": "never says ASIL, decomposition, independence or dependent failure analysis",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "two of my safety channels run on the same chip - does splitting the requirement between them still count?"
+        ],
+        "sources": [
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL decomposition"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          }
+        ],
+        "latency_ms": 22070.74630004354,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "two of my safety channels run on the same chip - does splitting the requirement between them still count?"
+        ],
+        "sources": [
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL decomposition"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          }
+        ],
+        "latency_ms": 27520.426899951417,
+        "cost_usd": 0.00017115,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "how do we decide how strictly a hazard has to be treated, and what goes into that judgement?",
+    "expected": [
+      "iso_26262_functional_safety.md"
+    ],
+    "expected_sections": [
+      "ASIL: how a hazard gets a level"
+    ],
+    "why_hard": "no mention of ASIL, severity, exposure, controllability or HARA",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 2,
+        "section_rank": 2,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "how do we decide how strictly a hazard has to be treated, and what goes into that judgement?"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          }
+        ],
+        "latency_ms": 36396.6069999733,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 2,
+        "section_rank": 2,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "how do we decide how strictly a hazard has to be treated, and what goes into that judgement?"
+        ],
+        "sources": [
+          {
+            "source": "iso_sae_21434.md",
+            "section": "TARA: the analytical core"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "The distinction from cybersecurity"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          }
+        ],
+        "latency_ms": 28975.142500014044,
+        "cost_usd": 0.00017400000000000006,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "someone got into the entertainment system - why does that suddenly matter for the brakes?",
+    "expected": [
+      "in_vehicle_networks_and_ids.md"
+    ],
+    "expected_sections": [
+      "Why the network is the interesting attack surface",
+      "Gateways and domain separation"
+    ],
+    "why_hard": "describes a consequence; says nothing about buses, gateways or segmentation",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "someone got into the entertainment system - why does that suddenly matter for the brakes?"
+        ],
+        "sources": [
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Why the network is the interesting attack surface"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Intrusion detection in a vehicle"
+          }
+        ],
+        "latency_ms": 22455.429899971932,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "someone got into the entertainment system - why does that suddenly matter for the brakes?"
+        ],
+        "sources": [
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Why the network is the interesting attack surface"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "R155 \u2014 Cyber Security and Cyber Security Management System"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Intrusion detection in a vehicle"
+          }
+        ],
+        "latency_ms": 19753.904999990482,
+        "cost_usd": 0.00016859999999999998,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "the authenticity field on those messages is only a few bytes - is that not trivially forgeable?",
+    "expected": [
+      "in_vehicle_networks_and_ids.md"
+    ],
+    "expected_sections": [
+      "SecOC"
+    ],
+    "why_hard": "does not name SecOC, MAC truncation or freshness values",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 4,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "the authenticity field on those messages is only a few bytes - is that not trivially forgeable?"
+        ],
+        "sources": [
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "CAN and CAN FD"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          }
+        ],
+        "latency_ms": 14480.839300027583,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 4,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "the authenticity field on those messages is only a few bytes - is that not trivially forgeable?"
+        ],
+        "sources": [
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "CAN and CAN FD"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "SecOC"
+          }
+        ],
+        "latency_ms": 16336.029800004326,
+        "cost_usd": 0.0001806,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "someone changed a setting by hand in the console and now my deployment wants to undo it",
+    "expected": [
+      "infrastructure_as_code.md"
+    ],
+    "expected_sections": [
+      "State, which is where the real complexity lives"
+    ],
+    "why_hard": "never says drift, state or Terraform",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "someone changed a setting by hand in the console and now my deployment wants to undo it"
+        ],
+        "sources": [
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "The claim, and what it actually buys"
+          },
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "GitOps"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "The insight worth stating in an interview"
+          },
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "State, which is where the real complexity lives"
+          }
+        ],
+        "latency_ms": 9514.029900019523,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "someone changed a setting by hand in the console and now my deployment wants to undo it"
+        ],
+        "sources": [
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "The claim, and what it actually buys"
+          },
+          {
+            "source": "cicd_and_gitops.md",
+            "section": "GitOps"
+          },
+          {
+            "source": "kubernetes_and_containers.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "The insight worth stating in an interview"
+          },
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "State, which is where the real complexity lives"
+          }
+        ],
+        "latency_ms": 10046.351800032426,
+        "cost_usd": 0.00017850000000000006,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "a generated password ended up somewhere readable even though I marked the value as secret",
+    "expected": [
+      "infrastructure_as_code.md"
+    ],
+    "expected_sections": [
+      "State, which is where the real complexity lives",
+      "Secrets"
+    ],
+    "why_hard": "the answer is about the state file, which the question never mentions",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "a generated password ended up somewhere readable even though I marked the value as secret"
+        ],
+        "sources": [
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "State, which is where the real complexity lives"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "German market conventions"
+          },
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Embeddings"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Structured output"
+          }
+        ],
+        "latency_ms": 7030.80399997998,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "a generated password ended up somewhere readable even though I marked the value as secret"
+        ],
+        "sources": [
+          {
+            "source": "infrastructure_as_code.md",
+            "section": "State, which is where the real complexity lives"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "German market conventions"
+          },
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Embeddings"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Structured output"
+          }
+        ],
+        "latency_ms": 8272.739099978935,
+        "cost_usd": 0.0001386,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "the bill doubled last month and nobody can tell me which team caused it",
+    "expected": [
+      "cloud_cost_and_capacity.md"
+    ],
+    "expected_sections": [
+      "Making it visible"
+    ],
+    "why_hard": "no mention of tagging, attribution, showback or cost allocation",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 5,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "the bill doubled last month and nobody can tell me which team caused it"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "Scoring a CV against a posting"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Making it visible"
+          }
+        ],
+        "latency_ms": 7725.300699996296,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 5,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "the bill doubled last month and nobody can tell me which team caused it"
+        ],
+        "sources": [
+          {
+            "source": "ats_guide.md",
+            "section": "Scoring a CV against a posting"
+          },
+          {
+            "source": "unece_r155_r156.md",
+            "section": "How R155 relates to the Cyber Resilience Act"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Making it visible"
+          }
+        ],
+        "latency_ms": 10327.953799976967,
+        "cost_usd": 0.00014309999999999995,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "everything asks for far more capacity than it uses and we keep paying for more machines",
+    "expected": [
+      "cloud_cost_and_capacity.md"
+    ],
+    "expected_sections": [
+      "Kubernetes specifics",
+      "The levers, strongest first"
+    ],
+    "why_hard": "never says requests, limits, rightsizing or bin packing",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "everything asks for far more capacity than it uses and we keep paying for more machines"
+        ],
+        "sources": [
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Kubernetes specifics"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Why an engineer is asked about this at all"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Cost and latency"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          }
+        ],
+        "latency_ms": 7860.820000001695,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "everything asks for far more capacity than it uses and we keep paying for more machines"
+        ],
+        "sources": [
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Kubernetes specifics"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Why an engineer is asked about this at all"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Cost and latency"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          }
+        ],
+        "latency_ms": 8712.505199946463,
+        "cost_usd": 0.00019545,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "it keeps calling the same function over and over until something stops it",
+    "expected": [
+      "agent_architectures.md"
+    ],
+    "expected_sections": [
+      "The basic loop",
+      "Tool design is most of the work"
+    ],
+    "why_hard": "no mention of turn limits, termination or bounding a loop",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "it keeps calling the same function over and over until something stops it"
+        ],
+        "sources": [
+          {
+            "source": "agent_architectures.md",
+            "section": "The basic loop"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "Patterns worth naming"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Tool calling"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Intrusion detection in a vehicle"
+          }
+        ],
+        "latency_ms": 8022.438600019086,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "it keeps calling the same function over and over until something stops it"
+        ],
+        "sources": [
+          {
+            "source": "agent_architectures.md",
+            "section": "The basic loop"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "Patterns worth naming"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "Tool calling"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          },
+          {
+            "source": "in_vehicle_networks_and_ids.md",
+            "section": "Intrusion detection in a vehicle"
+          }
+        ],
+        "latency_ms": 8286.080300051253,
+        "cost_usd": 0.00018570000000000001,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "how do I stop it doing something expensive or irreversible without anyone checking first?",
+    "expected": [
+      "agent_architectures.md"
+    ],
+    "expected_sections": [
+      "Limiting what an agent can reach"
+    ],
+    "why_hard": "does not say allowlist, blast radius, approval gate or human in the loop",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "how do I stop it doing something expensive or irreversible without anyone checking first?"
+        ],
+        "sources": [
+          {
+            "source": "agent_architectures.md",
+            "section": "Limiting what an agent can reach"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "The basic loop"
+          },
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "The diagnosis that decides it"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Making it visible"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          }
+        ],
+        "latency_ms": 7137.844100012444,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "how do I stop it doing something expensive or irreversible without anyone checking first?"
+        ],
+        "sources": [
+          {
+            "source": "agent_architectures.md",
+            "section": "Limiting what an agent can reach"
+          },
+          {
+            "source": "agent_architectures.md",
+            "section": "The basic loop"
+          },
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "The diagnosis that decides it"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Making it visible"
+          },
+          {
+            "source": "cloud_cost_and_capacity.md",
+            "section": "Where the money actually goes"
+          }
+        ],
+        "latency_ms": 11547.908300010022,
+        "cost_usd": 0.00019274999999999994,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "our assistant keeps stating the wrong company policy - should we train it on our own documents?",
+    "expected": [
+      "fine_tuning_and_adaptation.md"
+    ],
+    "expected_sections": [
+      "The diagnosis that decides it",
+      "Why RAG is usually tried first"
+    ],
+    "why_hard": "the question proposes the wrong remedy; the document's answer is retrieval, not training",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "our assistant keeps stating the wrong company policy - should we train it on our own documents?"
+        ],
+        "sources": [
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "Why RAG is usually tried first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "PII and data protection"
+          }
+        ],
+        "latency_ms": 7589.359799982049,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 2,
+        "verdict": "weak",
+        "graded": true,
+        "queries": [
+          "our assistant keeps stating the wrong company policy - should we train it on our own documents?",
+          "how to train an AI assistant on company policies"
+        ],
+        "sources": [
+          {
+            "source": "fine_tuning_and_adaptation.md",
+            "section": "Why RAG is usually tried first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "automotive_cyber.md",
+            "section": "Cybersecurity Consultant \u2014 Vector Consulting Services GmbH"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          },
+          {
+            "source": "llmops_and_safety.md",
+            "section": "PII and data protection"
+          }
+        ],
+        "latency_ms": 24922.29060002137,
+        "cost_usd": 0.00043845000000000006,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "they asked what I expect to earn and I have no idea what to say",
+    "expected": [
+      "salary_and_negotiation.md"
+    ],
+    "expected_sections": [
+      "Who names a number first",
+      "Establish a range before anyone asks"
+    ],
+    "why_hard": "no mention of negotiation, ranges, bands or collective agreements",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "they asked what I expect to earn and I have no idea what to say"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Who names a number first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "What a complete application contains"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Question categories"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "When salary genuinely cannot move"
+          }
+        ],
+        "latency_ms": 8088.541200035252,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "they asked what I expect to earn and I have no idea what to say"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Who names a number first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "What a complete application contains"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Question categories"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "When salary genuinely cannot move"
+          }
+        ],
+        "latency_ms": 10771.461399970576,
+        "cost_usd": 0.00017280000000000003,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "my old employer's reference reads positively but something about the wording feels off",
+    "expected": [
+      "application_and_cover_letter.md"
+    ],
+    "expected_sections": [
+      "The Arbeitszeugnis"
+    ],
+    "why_hard": "never says Arbeitszeugnis, reference grading or coded language",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "my old employer's reference reads positively but something about the wording feels off"
+        ],
+        "sources": [
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The cover letter's actual job"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "What a complete application contains"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "When the offer arrives"
+          }
+        ],
+        "latency_ms": 7277.806999976747,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "my old employer's reference reads positively but something about the wording feels off"
+        ],
+        "sources": [
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The Arbeitszeugnis"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "The cover letter's actual job"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "What a complete application contains"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "When the offer arrives"
+          }
+        ],
+        "latency_ms": 11317.278400005307,
+        "cost_usd": 0.00017535,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "the posting asks for something I have never used - do I bring it up or stay quiet?",
+    "expected": [
+      "application_and_cover_letter.md"
+    ],
+    "expected_sections": [
+      "Addressing a gap you actually have",
+      "Matching the letter to the posting"
+    ],
+    "why_hard": "does not mention cover letters, gaps or adjacent experience",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "the posting asks for something I have never used - do I bring it up or stay quiet?"
+        ],
+        "sources": [
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Addressing a gap you actually have"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for a parse-safe CV"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Who names a number first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Matching the letter to the posting"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "German market conventions"
+          }
+        ],
+        "latency_ms": 7973.186800023541,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "the posting asks for something I have never used - do I bring it up or stay quiet?"
+        ],
+        "sources": [
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Addressing a gap you actually have"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for a parse-safe CV"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Who names a number first"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Matching the letter to the posting"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "German market conventions"
+          }
+        ],
+        "latency_ms": 9305.288199975621,
+        "cost_usd": 0.0001914,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "my CV just lists what I was responsible for and it reads flat - what should be there instead?",
+    "expected": [
+      "evidence_and_achievements.md"
+    ],
+    "expected_sections": [
+      "The difference that decides most CVs",
+      "Turning a duty into evidence"
+    ],
+    "why_hard": "never says achievement, evidence, duty or bullet",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "my CV just lists what I was responsible for and it reads flat - what should be there instead?"
+        ],
+        "sources": [
+          {
+            "source": "star_framework.md",
+            "section": "The STAR structure"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Cover letter guidance"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "What a complete application contains"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Matching the letter to the posting"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Practical observations"
+          }
+        ],
+        "latency_ms": 9392.997000017203,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "my CV just lists what I was responsible for and it reads flat - what should be there instead?"
+        ],
+        "sources": [
+          {
+            "source": "star_framework.md",
+            "section": "The STAR structure"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Cover letter guidance"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "What a complete application contains"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Matching the letter to the posting"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Practical observations"
+          }
+        ],
+        "latency_ms": 9740.746900031809,
+        "cost_usd": 0.0001851,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "I only half remember the figure - is it better to round it or leave it out?",
+    "expected": [
+      "evidence_and_achievements.md"
+    ],
+    "expected_sections": [
+      "Numbers, and how not to abuse them"
+    ],
+    "why_hard": "no mention of metrics, quantifying or numbers on a CV",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "I only half remember the figure - is it better to round it or leave it out?"
+        ],
+        "sources": [
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "changing_field_and_transferable_skills.md",
+            "section": "What transfers, and what does not"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for tailoring a CV"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Chunking"
+          }
+        ],
+        "latency_ms": 7585.7102000154555,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 1,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "I only half remember the figure - is it better to round it or leave it out?"
+        ],
+        "sources": [
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "evidence_and_achievements.md",
+            "section": "Numbers, and how not to abuse them"
+          },
+          {
+            "source": "changing_field_and_transferable_skills.md",
+            "section": "What transfers, and what does not"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for tailoring a CV"
+          },
+          {
+            "source": "rag_architecture.md",
+            "section": "Chunking"
+          }
+        ],
+        "latency_ms": 18894.87919997191,
+        "cost_usd": 0.0001608,
+        "calls": 1
+      }
+    }
+  },
+  {
+    "question": "I worked nine years in one industry and want to move - do I explain why I am switching?",
+    "expected": [
+      "changing_field_and_transferable_skills.md"
+    ],
+    "expected_sections": [
+      "The problem, stated honestly",
+      "The structure that works"
+    ],
+    "why_hard": "the document's answer contradicts the premise: motivation is the second question, not the first",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "I worked nine years in one industry and want to move - do I explain why I am switching?"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "When the offer arrives"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Practical observations"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "1. Parse failure"
+          }
+        ],
+        "latency_ms": 20197.76319997618,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 2,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "I worked nine years in one industry and want to move - do I explain why I am switching?",
+          "how to explain a career change in an interview"
+        ],
+        "sources": [
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Addressing a gap you actually have"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Structure that works"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Career-transition and gap questions"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "The STAR structure"
+          },
+          {
+            "source": "star_framework.md",
+            "section": "Question categories"
+          }
+        ],
+        "latency_ms": 31144.51990002999,
+        "cost_usd": 0.00043679999999999994,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "how do I show I can do work I have never been paid to do?",
+    "expected": [
+      "changing_field_and_transferable_skills.md"
+    ],
+    "expected_sections": [
+      "Evidence you can build before you have the job"
+    ],
+    "why_hard": "does not say portfolio, side project, certification or career change",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "how do I show I can do work I have never been paid to do?"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Internal raises"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for tailoring a CV"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for a parse-safe CV"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Matching the letter to the posting"
+          }
+        ],
+        "latency_ms": 13948.352799983695,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": null,
+        "section_rank": null,
+        "rounds": 2,
+        "verdict": "weak",
+        "graded": true,
+        "queries": [
+          "how do I show I can do work I have never been paid to do?",
+          "how to showcase transferable skills in a job application"
+        ],
+        "sources": [
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Internal raises"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for tailoring a CV"
+          },
+          {
+            "source": "ats_guide.md",
+            "section": "Rules for a parse-safe CV"
+          },
+          {
+            "source": "application_and_cover_letter.md",
+            "section": "Matching the letter to the posting"
+          }
+        ],
+        "latency_ms": 30438.09260003036,
+        "cost_usd": 0.00042540000000000004,
+        "calls": 3
+      }
+    }
+  },
+  {
+    "question": "the words I use for this are the old industry's words - does that matter?",
+    "expected": [
+      "changing_field_and_transferable_skills.md"
+    ],
+    "expected_sections": [
+      "Translating vocabulary"
+    ],
+    "why_hard": "never says vocabulary, jargon, terminology or translation",
+    "outcomes": {
+      "ungraded": {
+        "config": "ungraded",
+        "doc_rank": 1,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": false,
+        "queries": [
+          "the words I use for this are the old industry's words - does that matter?"
+        ],
+        "sources": [
+          {
+            "source": "changing_field_and_transferable_skills.md",
+            "section": "What transfers, and what does not"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "DORA metrics"
+          },
+          {
+            "source": "changing_field_and_transferable_skills.md",
+            "section": "Translating vocabulary"
+          }
+        ],
+        "latency_ms": 8985.061999992467,
+        "cost_usd": 0.0,
+        "calls": 0
+      },
+      "graded": {
+        "config": "graded",
+        "doc_rank": 1,
+        "section_rank": 5,
+        "rounds": 1,
+        "verdict": "sufficient",
+        "graded": true,
+        "queries": [
+          "the words I use for this are the old industry's words - does that matter?"
+        ],
+        "sources": [
+          {
+            "source": "changing_field_and_transferable_skills.md",
+            "section": "What transfers, and what does not"
+          },
+          {
+            "source": "iso_26262_functional_safety.md",
+            "section": "ASIL: how a hazard gets a level"
+          },
+          {
+            "source": "salary_and_negotiation.md",
+            "section": "Establish a range before anyone asks"
+          },
+          {
+            "source": "sre_and_dora.md",
+            "section": "DORA metrics"
+          },
+          {
+            "source": "changing_field_and_transferable_skills.md",
+            "section": "Translating vocabulary"
+          }
+        ],
+        "latency_ms": 10474.471599969547,
+        "cost_usd": 0.00015465,
+        "calls": 1
+      }
+    }
+  }
+]

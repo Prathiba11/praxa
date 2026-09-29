@@ -1,0 +1,501 @@
+{
+  "description": "Retrieval golden set, v2. The first version scored 100% hit@5 and MRR 1.000 for every strategy including naive dense search, which means it measured nothing: each question shared obvious vocabulary with exactly one document, so BM25 alone won and translation, fusion and reranking had no tie to break. These questions are written against that failure. Each one either (a) uses no significant vocabulary from its source, so lexical matching cannot carry it, (b) has a plausible wrong answer in another document, so ranking has to be right rather than merely non-empty, (c) is asked in German about English content, or (d) targets one section of a long document, so file-level retrieval is not enough. `expected` lists acceptable source files. `expected_sections`, where present, lists acceptable section labels - more than one because the chunker merges short adjacent prose sections and the chunk carries the first heading.",
+  "questions": [
+    {
+      "question": "my container keeps dying and the logs just stop - where do I start looking?",
+      "expected": [
+        "kubernetes_and_containers.md"
+      ],
+      "expected_sections": [
+        "Diagnosing the common failures",
+        "Kubernetes: what it actually is"
+      ],
+      "why_hard": "describes a symptom; the words OOMKilled, CrashLoopBackOff and exit code appear nowhere in the question"
+    },
+    {
+      "question": "how do I show a manager in numbers whether we are shipping quickly and safely?",
+      "expected": [
+        "sre_and_dora.md"
+      ],
+      "expected_sections": [
+        "DORA metrics"
+      ],
+      "why_hard": "no mention of DORA, deployment frequency, lead time or change failure rate"
+    },
+    {
+      "question": "when is it reasonable to stop building features for a while and work on stability instead?",
+      "expected": [
+        "sre_and_dora.md"
+      ],
+      "expected_sections": [
+        "Site Reliability Engineering: the core idea"
+      ],
+      "why_hard": "the answer is error budgets; the term is not used in the question"
+    },
+    {
+      "question": "why is it safer for the cluster to pull its own configuration than for a pipeline to push it?",
+      "expected": [
+        "cicd_and_gitops.md"
+      ],
+      "expected_sections": [
+        "GitOps"
+      ],
+      "why_hard": "competes with the CI/CD sections of the same document; only the right section answers it"
+    },
+    {
+      "question": "what stops a release from going out to every machine at once if it turns out to be broken?",
+      "expected": [
+        "cicd_and_gitops.md"
+      ],
+      "expected_sections": [
+        "Deployment strategies",
+        "Pipeline design principles"
+      ],
+      "why_hard": "canary and blue-green are the answer, neither word appears"
+    },
+    {
+      "question": "a supplier wants to send software to vehicles already on the road - what has to be in place first?",
+      "expected": [
+        "unece_r155_r156.md"
+      ],
+      "expected_sections": [
+        "R156 - Software Update and Software Update Management System",
+        "R156 — Software Update and Software Update Management System"
+      ],
+      "why_hard": "R155 and R156 sit in the same file and read almost identically to a bag-of-words retriever"
+    },
+    {
+      "question": "who has to prove they manage vehicle security before they are allowed to sell a car in Europe?",
+      "expected": [
+        "unece_r155_r156.md"
+      ],
+      "expected_sections": [
+        "R155 - Cyber Security and Cyber Security Management System",
+        "R155 — Cyber Security and Cyber Security Management System",
+        "Why these matter more than the standards"
+      ],
+      "why_hard": "the sibling regulation in the same document is a plausible wrong answer"
+    },
+    {
+      "question": "how do you judge how much effort and skill an attacker would actually need?",
+      "expected": [
+        "iso_sae_21434.md"
+      ],
+      "expected_sections": [
+        "TARA: the analytical core"
+      ],
+      "why_hard": "attack feasibility rating, asked without the term"
+    },
+    {
+      "question": "wie bewerte ich das Risiko eines Angriffs auf ein Steuergerät?",
+      "expected": [
+        "iso_sae_21434.md"
+      ],
+      "expected_sections": [
+        "TARA: the analytical core",
+        "Structure"
+      ],
+      "why_hard": "German question, English source, and no shared tokens at all"
+    },
+    {
+      "question": "welche Nachweise verlangt ein Auditor für ein Managementsystem zur Fahrzeugsicherheit?",
+      "expected": [
+        "unece_r155_r156.md",
+        "iso_sae_21434.md"
+      ],
+      "why_hard": "German, and two documents legitimately contribute"
+    },
+    {
+      "question": "what is the difference between the process maturity assessment and the security standard?",
+      "expected": [
+        "aspice_and_ecu_security_testing.md",
+        "iso_sae_21434.md"
+      ],
+      "why_hard": "requires distinguishing two neighbouring documents rather than matching one"
+    },
+    {
+      "question": "a recruiter's software discards my application before a person sees it - what causes that most often?",
+      "expected": [
+        "ats_guide.md"
+      ],
+      "expected_sections": [
+        "How candidates are really filtered out, in order of frequency",
+        "What an ATS actually is"
+      ],
+      "why_hard": "no use of the term ATS, parsing, or keyword"
+    },
+    {
+      "question": "should I copy phrases straight out of the advert into my CV?",
+      "expected": [
+        "ats_guide.md"
+      ],
+      "expected_sections": [
+        "Keyword strategy",
+        "Rules for tailoring a CV"
+      ],
+      "why_hard": "targets one section of a long guide whose other sections are lexically similar"
+    },
+    {
+      "question": "my interview answers wander and I never seem to get to the point - what am I doing wrong?",
+      "expected": [
+        "star_framework.md"
+      ],
+      "expected_sections": [
+        "The four failure modes to score against",
+        "Strong versus weak, letter by letter"
+      ],
+      "why_hard": "STAR is not mentioned; the guide's other sections compete"
+    },
+    {
+      "question": "how should I talk about the period when I was not working?",
+      "expected": [
+        "star_framework.md"
+      ],
+      "expected_sections": [
+        "Career-transition and gap questions"
+      ],
+      "why_hard": "a specific late section of a long document"
+    },
+    {
+      "question": "the assistant still makes things up even though I gave it the documents - why?",
+      "expected": [
+        "rag_architecture.md"
+      ],
+      "expected_sections": [
+        "Failure modes to be able to name",
+        "Context assembly and generation"
+      ],
+      "why_hard": "hallucination and grounding are not named"
+    },
+    {
+      "question": "searching by meaning misses documents that use a different word for the same thing - what fixes that?",
+      "expected": [
+        "rag_architecture.md"
+      ],
+      "expected_sections": [
+        "Hybrid search",
+        "Query translation",
+        "Embeddings"
+      ],
+      "why_hard": "several sections of one document are plausible; the question describes vocabulary mismatch without naming BM25 or fusion"
+    },
+    {
+      "question": "a document I pulled back contains an instruction aimed at the assistant - how do I stop it being followed?",
+      "expected": [
+        "llmops_and_safety.md",
+        "rag_architecture.md"
+      ],
+      "expected_sections": [
+        "Prompt injection"
+      ],
+      "why_hard": "one section of an eleven-section document, described rather than named"
+    },
+    {
+      "question": "how do I stop getting prose back when I need fields I can parse?",
+      "expected": [
+        "llmops_and_safety.md"
+      ],
+      "expected_sections": [
+        "Structured output",
+        "Tool calling"
+      ],
+      "why_hard": "adjacent sections of the same file are near neighbours in embedding space"
+    },
+    {
+      "question": "it scored well in testing and badly once real users arrived, on the same kind of input",
+      "expected": [
+        "mlops_lifecycle.md"
+      ],
+      "expected_sections": [
+        "The lifecycle",
+        "Why ML systems need their own operational discipline"
+      ],
+      "why_hard": "training-serving skew, described as a symptom"
+    },
+    {
+      "question": "have I ever attacked a device deliberately as part of my job?",
+      "expected": [
+        "automotive_cyber.md"
+      ],
+      "expected_sections": [
+        "Experience",
+        "Summary",
+        "Skills"
+      ],
+      "why_hard": "the ECU security-testing reference document is a strong lexical competitor; the CV is the correct answer"
+    },
+    {
+      "question": "which regulations have I applied in real projects rather than only studied?",
+      "expected": [
+        "automotive_cyber.md"
+      ],
+      "expected_sections": [
+        "Experience",
+        "Summary"
+      ],
+      "why_hard": "the regulation documents themselves out-match the CV on vocabulary"
+    },
+    {
+      "question": "was habe ich beruflich mit Container-Orchestrierung gemacht?",
+      "expected": [
+        "devops.md"
+      ],
+      "expected_sections": [
+        "Experience",
+        "Skills",
+        "Summary"
+      ],
+      "why_hard": "German question about an English CV, competing with the Kubernetes reference document"
+    },
+    {
+      "question": "have I built anything with language models outside of paid work?",
+      "expected": [
+        "ai_eng.md"
+      ],
+      "expected_sections": [
+        "Projects"
+      ],
+      "why_hard": "must reach the Projects section specifically, not Experience"
+    },
+    {
+      "question": "have I ever taught this material to other engineers?",
+      "expected": [
+        "automotive_cyber.md",
+        "devops.md",
+        "ai_eng.md"
+      ],
+      "expected_sections": [
+        "Experience"
+      ],
+      "why_hard": "one bullet inside a long Experience section"
+    },
+    {
+      "question": "which languages can I work in professionally?",
+      "expected": [
+        "automotive_cyber.md",
+        "devops.md",
+        "ai_eng.md"
+      ],
+      "expected_sections": [
+        "Languages"
+      ],
+      "why_hard": "the shortest section in the corpus - the one a size-based chunker would swallow"
+    },
+    {
+      "question": "what did I study, and where?",
+      "expected": [
+        "automotive_cyber.md",
+        "devops.md",
+        "ai_eng.md"
+      ],
+      "expected_sections": [
+        "Education"
+      ],
+      "why_hard": "short section, competes with Certifications and Publications in the same document"
+    },
+    {
+      "question": "what is the weather in Stuttgart tomorrow?",
+      "expected": [],
+      "why_hard": "out of domain: nothing should be considered a hit, and the guardrail should refuse it before retrieval runs at all"
+    },
+    {
+      "question": "two of my safety channels run on the same chip - does splitting the requirement between them still count?",
+      "expected": [
+        "iso_26262_functional_safety.md"
+      ],
+      "expected_sections": [
+        "ASIL decomposition"
+      ],
+      "why_hard": "never says ASIL, decomposition, independence or dependent failure analysis"
+    },
+    {
+      "question": "how do we decide how strictly a hazard has to be treated, and what goes into that judgement?",
+      "expected": [
+        "iso_26262_functional_safety.md"
+      ],
+      "expected_sections": [
+        "ASIL: how a hazard gets a level"
+      ],
+      "why_hard": "no mention of ASIL, severity, exposure, controllability or HARA"
+    },
+    {
+      "question": "someone got into the entertainment system - why does that suddenly matter for the brakes?",
+      "expected": [
+        "in_vehicle_networks_and_ids.md"
+      ],
+      "expected_sections": [
+        "Why the network is the interesting attack surface",
+        "Gateways and domain separation"
+      ],
+      "why_hard": "describes a consequence; says nothing about buses, gateways or segmentation"
+    },
+    {
+      "question": "the authenticity field on those messages is only a few bytes - is that not trivially forgeable?",
+      "expected": [
+        "in_vehicle_networks_and_ids.md"
+      ],
+      "expected_sections": [
+        "SecOC"
+      ],
+      "why_hard": "does not name SecOC, MAC truncation or freshness values"
+    },
+    {
+      "question": "someone changed a setting by hand in the console and now my deployment wants to undo it",
+      "expected": [
+        "infrastructure_as_code.md"
+      ],
+      "expected_sections": [
+        "State, which is where the real complexity lives"
+      ],
+      "why_hard": "never says drift, state or Terraform"
+    },
+    {
+      "question": "a generated password ended up somewhere readable even though I marked the value as secret",
+      "expected": [
+        "infrastructure_as_code.md"
+      ],
+      "expected_sections": [
+        "State, which is where the real complexity lives",
+        "Secrets"
+      ],
+      "why_hard": "the answer is about the state file, which the question never mentions"
+    },
+    {
+      "question": "the bill doubled last month and nobody can tell me which team caused it",
+      "expected": [
+        "cloud_cost_and_capacity.md"
+      ],
+      "expected_sections": [
+        "Making it visible"
+      ],
+      "why_hard": "no mention of tagging, attribution, showback or cost allocation"
+    },
+    {
+      "question": "everything asks for far more capacity than it uses and we keep paying for more machines",
+      "expected": [
+        "cloud_cost_and_capacity.md"
+      ],
+      "expected_sections": [
+        "Kubernetes specifics",
+        "The levers, strongest first"
+      ],
+      "why_hard": "never says requests, limits, rightsizing or bin packing"
+    },
+    {
+      "question": "it keeps calling the same function over and over until something stops it",
+      "expected": [
+        "agent_architectures.md"
+      ],
+      "expected_sections": [
+        "The basic loop",
+        "Tool design is most of the work"
+      ],
+      "why_hard": "no mention of turn limits, termination or bounding a loop"
+    },
+    {
+      "question": "how do I stop it doing something expensive or irreversible without anyone checking first?",
+      "expected": [
+        "agent_architectures.md"
+      ],
+      "expected_sections": [
+        "Limiting what an agent can reach"
+      ],
+      "why_hard": "does not say allowlist, blast radius, approval gate or human in the loop"
+    },
+    {
+      "question": "our assistant keeps stating the wrong company policy - should we train it on our own documents?",
+      "expected": [
+        "fine_tuning_and_adaptation.md"
+      ],
+      "expected_sections": [
+        "The diagnosis that decides it",
+        "Why RAG is usually tried first"
+      ],
+      "why_hard": "the question proposes the wrong remedy; the document's answer is retrieval, not training"
+    },
+    {
+      "question": "they asked what I expect to earn and I have no idea what to say",
+      "expected": [
+        "salary_and_negotiation.md"
+      ],
+      "expected_sections": [
+        "Who names a number first",
+        "Establish a range before anyone asks"
+      ],
+      "why_hard": "no mention of negotiation, ranges, bands or collective agreements"
+    },
+    {
+      "question": "my old employer's reference reads positively but something about the wording feels off",
+      "expected": [
+        "application_and_cover_letter.md"
+      ],
+      "expected_sections": [
+        "The Arbeitszeugnis"
+      ],
+      "why_hard": "never says Arbeitszeugnis, reference grading or coded language"
+    },
+    {
+      "question": "the posting asks for something I have never used - do I bring it up or stay quiet?",
+      "expected": [
+        "application_and_cover_letter.md"
+      ],
+      "expected_sections": [
+        "Addressing a gap you actually have",
+        "Matching the letter to the posting"
+      ],
+      "why_hard": "does not mention cover letters, gaps or adjacent experience"
+    },
+    {
+      "question": "my CV just lists what I was responsible for and it reads flat - what should be there instead?",
+      "expected": [
+        "evidence_and_achievements.md"
+      ],
+      "expected_sections": [
+        "The difference that decides most CVs",
+        "Turning a duty into evidence"
+      ],
+      "why_hard": "never says achievement, evidence, duty or bullet"
+    },
+    {
+      "question": "I only half remember the figure - is it better to round it or leave it out?",
+      "expected": [
+        "evidence_and_achievements.md"
+      ],
+      "expected_sections": [
+        "Numbers, and how not to abuse them"
+      ],
+      "why_hard": "no mention of metrics, quantifying or numbers on a CV"
+    },
+    {
+      "question": "I worked nine years in one industry and want to move - do I explain why I am switching?",
+      "expected": [
+        "changing_field_and_transferable_skills.md"
+      ],
+      "expected_sections": [
+        "The problem, stated honestly",
+        "The structure that works"
+      ],
+      "why_hard": "the document's answer contradicts the premise: motivation is the second question, not the first"
+    },
+    {
+      "question": "how do I show I can do work I have never been paid to do?",
+      "expected": [
+        "changing_field_and_transferable_skills.md"
+      ],
+      "expected_sections": [
+        "Evidence you can build before you have the job"
+      ],
+      "why_hard": "does not say portfolio, side project, certification or career change"
+    },
+    {
+      "question": "the words I use for this are the old industry's words - does that matter?",
+      "expected": [
+        "changing_field_and_transferable_skills.md"
+      ],
+      "expected_sections": [
+        "Translating vocabulary"
+      ],
+      "why_hard": "never says vocabulary, jargon, terminology or translation"
+    }
+  ]
+}

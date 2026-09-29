@@ -1,0 +1,78 @@
+# ---- secrets ----
+.env
+.env.*
+!.env.example
+*.key
+
+# ---- personal data: GDPR. Never commit real CVs or generated documents ----
+#
+# These rules are narrow on purpose. The previous version used `data/*`,
+# `resumes/` and `audio/`, and each one over-matched badly:
+#
+#   data/*      excluded the whole knowledge base - the ATS guide, the STAR
+#               material and every domain reference. Those are source, not
+#               personal data, and the app is unusable without them.
+#   resumes/    has no leading slash, so it matched a directory of that name at
+#               ANY depth - which is also how the folder the code looks for
+#               stopped existing in a clean checkout.
+#   audio/      likewise matched `career_copilot/audio/`, so the entire
+#               speech-to-text package was invisible to git.
+#
+# A gitignore rule that quietly drops source is worse than one that leaks a
+# temporary file, because nothing ever tells you.
+data/kb/resumes/*
+!data/kb/resumes/.gitkeep
+data/output/
+data/generated/
+data/audio/
+*.docx
+
+# ---- stores ----
+#
+# The `-wal` and `-shm` sidecars matter as much as the database itself. SQLite
+# in WAL mode writes new pages to `-wal` first, so that file holds real rows -
+# fetched postings, remembered facts, interview answers - until a checkpoint
+# folds them into the `.db`. `*.db` never matched them, and both were tracked.
+data/*.db
+data/chroma/
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite3
+/chroma/
+/.chroma/
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ---- editors / os ----
+.idea/
+.DS_Store
+
+# runtime cost log
+data/*.jsonl
+
+# Project documentation is not personal data. The blanket *.docx rule above
+# stops a tailored CV or cover letter being committed from anywhere - but it
+# also caught project documents, which belong in the repository.
+!docs/*.docx
+
+# Console dumps from evaluation and profiling runs. The findings live in
+# docs/evaluation.md and data/eval/; the raw terminal output is scratch.
+profile.txt
+eval*.txt
+
+# ---- working notes, not the project ----
+Claude outputs/

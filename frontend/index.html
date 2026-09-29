@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The tagline lives in the title, not only in the description: the tab,
+         the bookmark and the hover preview all show the title, and "Praxa"
+         alone tells a stranger nothing. Kept short enough that the tab does not
+         truncate it to the point of uselessness. -->
+    <title>Praxa – apply and prepare for your next role</title>
+    <meta
+      name="description"
+      content="Tailors your CV and cover letter from what your own CV actually says, checks every claim against it, and saves nothing until you approve."
+    />
+
+    <!-- Open Graph and Twitter tags: the same two strings, in the form a chat
+         app or a social card reads. Without them a shared link renders as a
+         bare URL. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Praxa – apply and prepare for your next role" />
+    <meta
+      property="og:description"
+      content="Tailors your CV and cover letter from what your own CV actually says, checks every claim against it, and saves nothing until you approve."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- Inter and JetBrains Mono were named in tailwind.config.js and never
+         loaded, so every screen rendered in the system UI font. Sora is the
+         display face, used only for the wordmark and large headings. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

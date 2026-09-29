@@ -1,0 +1,45 @@
+# Anything not needed to run the app. Keeping this tight matters twice over:
+# the build context is smaller, and personal data cannot leak into an image.
+
+# Secrets and personal data - never in an image.
+.env
+data/
+!data/.gitkeep
+
+# Version control and CI
+.git
+.gitignore
+.github
+
+# Node. `frontend/` itself IS needed - the Node stage builds it - but these two
+# are not: node_modules is reinstalled from the lockfile inside the build, and
+# dist is produced there. Copying either in would make the context hundreds of
+# megabytes and could ship a stale bundle built on someone's laptop.
+frontend/node_modules
+frontend/dist
+
+# Local environments and caches
+.venv
+venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.coverage
+htmlcov
+*.egg-info
+build
+dist
+
+# Tests and tooling are not part of the runtime image.
+tests
+docs
+*.md
+!README.md
+requirements-dev.txt
+
+# Editor noise
+.vscode
+.idea
+.DS_Store

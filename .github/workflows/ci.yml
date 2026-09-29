@@ -1,0 +1,198 @@
+name: CI
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+# Automatic runs were switched off for a release window in September 2026,
+# on the reasoning that the suite runs locally before every push and CI was a
+# duplicate signal. That was wrong, and a code review is where it showed:
+# a reviewer who could not run the suite from the files they had also had no CI
+# run to look at instead. The signal was duplicated for the author and unique for
+# everybody else.
+#
+# The docker job below still runs only on demand - see the reason on that job.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    # Every job carries a timeout. Without one the default is six hours, and a
+    # job that hangs rather than fails burns a month of Actions minutes on a
+    # private repository before anyone notices. These bounds are roughly double
+    # the observed runtime, so a slow day passes and a hang does not.
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: ruff format --check .
+  types:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      # Installs the package editable AND its dev tools, in one step.
+      - run: pip install -e ".[dev]"
+      - run: mypy career_copilot
+  test:
+    needs: [lint, types]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.12 only. The matrix carried 3.14, which fails at `pip install`
+        # rather than in this code: torch, chromadb and sentence-transformers
+        # do not publish wheels for it, so the job spent its time compiling and
+        # then died. A stated limitation in the README is worth more than a
+        # permanently red check that says nothing about the project.
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      # Installs the package editable AND its dev tools, in one step.
+      - run: pip install -e ".[dev]"
+      # Unit, integration and functional tests. The `live` marker covers the
+      # few that reach a real external service (an LLM, or a model download);
+      # everything else runs with fakes, so CI needs no API key and no network.
+      #
+      # The values below are placeholders and are never sent anywhere: the
+      # deselected `live` tests are the only ones that open a connection. They
+      # exist because `Settings` validates its required fields at import time,
+      # and any test that reaches `get_settings()` without a fixture would
+      # otherwise fail on a machine with no `.env` - which is every machine but
+      # the developer's own. The docker job has always passed the same pair in.
+      - run: pytest -m "not live" --cov=career_copilot --cov-report=term-missing
+        env:
+          OPENROUTER_API_KEY: sk-or-v1-ci-not-a-real-key
+          CC_MODEL: openai/gpt-4o-mini
+  frontend:
+    # There was no frontend job until a code review asked for one, which
+    # meant the half of the project a reviewer actually looks at was the half CI
+    # never built. These three commands are exactly what runs locally before a
+    # push, in the same order.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      # `npm ci` rather than `npm install`: it installs exactly the lockfile and
+      # fails if package.json and the lock have drifted, which is the whole
+      # point of running this on a clean machine.
+      - run: npm ci
+      - run: npx tsc -b --force
+      - run: npx eslint src --max-warnings=0
+      - run: npm run build
+  docker:
+    # ON DEMAND ONLY. Run it from the Actions tab with "Run workflow", or:
+    #     gh workflow run CI
+    #
+    # The image is what a reviewer or a deployment actually runs, so a broken
+    # Dockerfile should be caught here rather than during a demo. But this build
+    # installs torch and its transitive dependencies from scratch every time,
+    # and on a shared runner that takes longer than the job budget allows. It
+    # was killed at six hours before it had a timeout, and at twenty-five
+    # minutes after. Dropping the layer cache did not change it: the cost is the
+    # install itself, not the caching around it.
+    #
+    # Running it on every push therefore bought nothing except a red badge on
+    # commits whose tests all passed, and it spent Actions minutes doing it. So
+    # it moves to a button. That is a smaller claim than "the image builds on
+    # every commit" - and it is the true one.
+    if: github.event_name == 'workflow_dispatch'
+    needs: [lint, types]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          # Without this the image is built untagged and the run step below
+          # fails with "Unable to find image 'career-copilot:ci'".
+          tags: career-copilot:ci
+          # No layer cache. `cache-to: type=gha,mode=max` exports every
+          # intermediate layer, and this image is several gigabytes. That upload
+          # never finished inside the budget, so `cache-from` never had anything
+          # to restore either: every run paid for a cold build AND an export
+          # nobody would read.
+          provenance: false
+      # A build that produces an image which cannot start is not a passing
+      # build. This imports the app inside the container, which exercises every
+      # module-level import path without needing an API key.
+      #
+      # `timeout 300` as well as the job timeout: if an import reaches out for a
+      # model download and blocks on a terminal that is not there, the step
+      # should fail in five minutes with a message, not hang the whole job.
+      - name: Container imports the application
+        timeout-minutes: 6
+        run: |
+          docker run --rm \
+            -e OPENROUTER_API_KEY=sk-or-v1-ci-not-a-real-key \
+            -e CC_MODEL=openai/gpt-4o-mini \
+            -e HF_HUB_OFFLINE=1 \
+            -e TRANSFORMERS_OFFLINE=1 \
+            career-copilot:ci \
+            timeout 300 python -c "import career_copilot, career_copilot.agent, career_copilot.tools; print('ok')"
+
+      # Importing is not serving. This starts the container the way a reviewer
+      # would and checks two things: that the API answers, and that the page
+      # served at / is the React bundle. The second check is the one that would
+      # have caught this image shipping the old Streamlit interface for a whole
+      # release - an import test passed the entire time.
+      - name: Container serves the application
+        timeout-minutes: 6
+        run: |
+          docker run -d --name smoke -p 8000:8000 \
+            -e OPENROUTER_API_KEY=sk-or-v1-ci-not-a-real-key \
+            -e CC_MODEL=openai/gpt-4o-mini \
+            -e CC_WARM_MODELS=false \
+            -e HF_HUB_OFFLINE=1 \
+            -e TRANSFORMERS_OFFLINE=1 \
+            career-copilot:ci
+
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://localhost:8000/api/health > /dev/null; then break; fi
+            if [ "$attempt" = "30" ]; then
+              echo "::error::the API never became healthy"
+              docker logs smoke
+              exit 1
+            fi
+            sleep 2
+          done
+
+          curl -fsS http://localhost:8000/api/health | tee /dev/stderr | grep -q '"status"'
+
+          # The single-page mount returns index.html for unknown paths, so this
+          # asserts on what that file contains rather than on the status code.
+          body=$(curl -fsS http://localhost:8000/)
+          echo "$body" | grep -q '<div id="root">' \
+            || { echo "::error::/ did not serve the React bundle"; echo "$body" | head -20; exit 1; }
+
+          docker rm -f smoke
